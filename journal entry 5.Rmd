@@ -1,0 +1,114 @@
+---
+title: "journel entry 5"
+output: html_notebook
+
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+Exercise 1
+
+Discrete probability distribution
+Introduction to Bayesian 
+A Spinner game of chance with the help of TeachBayes Package with functions
+Bayes'rule
+
+ Q.1 # Define a spinner with five regions: regions
+regions <- c(2,2,2,2,2)
+spinner_plot(regions)
+spinner_probs(regions)
+
+Q.2 #plot the spinner
+spinner_plot(regions)
+Q.3 # Show the probability distribution
+spinner_probs(regions)
+Q.3#define the new spinner :regions
+regions <- c(2, 2, 4)
+Q.4q# Simulation 1000 spins: spins
+spins <- spinner_data(regions, 1000)
+Q.6 #grahp the spin data 
+bar_plot(spins)
+Q7#construct the frequency table of spins 
+table(spins)
+Q8#find the fraction of spins qual to 2
+mean(spins == 2)
+find the spin value 
+mean(spins)
+
+library(TeachBayes)
+areas <- c(2,1,2,1,2)
+spinner_plot(areas)
+
+df<- data.frame(region= 1:5, areas, Probabilty = areas/sum(areas))
+df
+Model <- c("Spinner A", "Spinner B")
+
+
+define the vector of the prior probabliteis 
+Prior <- c(1/2, 1/2)
+
+define the vector of likelihoods
+Likelihood <- c(1/2, 1/6)
+
+#to interpret the probability
+sum(df4probability)
+
+.#simulating spinner data
+spins<- spinner_data(areas)
+bar_plot(spins)
+table(spins)
+
+
+make a data frame with variables model, prior
+bayes_df <- data.frame(Model, Prior, Likelihood)
+
+Compute the posterior probabilites
+bayesian_crank(bayes_df)
+
+bayes_df
+prior_post_plot
+prior_post_plot (bayes_df)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
